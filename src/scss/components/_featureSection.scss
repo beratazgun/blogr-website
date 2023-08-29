@@ -1,11 +1,13 @@
 .feature-section {
   display: flex;
   width: 100%;
-  height: 650px;
+  height: 700px;
   position: relative;
   overflow: hidden;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  gap: 20rem;
+  transition: all 0.5s ease-in-out;
 
   @media screen and (min-width: 1440px) {
     width: 1440px;
@@ -14,12 +16,24 @@
     margin: 0 auto;
   }
 
-  @media screen and (max-width: 930px) {
-    // height: 100%;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 5rem;
+  @media screen and (max-width: 1300px) {
+    gap: 12rem;
+  }
+
+  @media screen and (max-width: 750px) {
+    flex-direction: column-reverse;
+    height: 1200px;
+    gap: 8rem;
+  }
+
+  @media screen and (max-width: 550px) {
+    gap: 3rem;
+    height: 1100px;
+  }
+
+  @media screen and (max-width: 380px) {
+    gap: 2rem;
+    height: 900px;
   }
 
   .feature-title {
@@ -30,11 +44,23 @@
     letter-spacing: 1px;
     color: $very-dark-blue;
     font-size: 28px;
+    transition: all 0.5s ease-in-out;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    width: 100%;
+    text-align: center;
+
+    @media screen and (max-width: 550px) {
+      top: 50px;
+    }
+
+    @media screen and (max-width: 670px) {
+      font-size: 24px;
+    }
   }
 
   .feature-content {
-    position: absolute;
-    width: 32rem;
+    width: 36rem;
     top: 14rem;
     font-family: $font-overpass;
     font-weight: 300;
@@ -48,18 +74,25 @@
     justify-content: center;
     gap: 2rem;
     transition: all 0.5s ease-in-out;
+    // position: absolute;
+    left: 12rem;
+    padding-left: 2rem;
 
-    @media screen and (min-width: 1440px) {
-      left: 6rem;
+    @media screen and (max-width: 380px) {
+      width: 2rem;
     }
 
-    @media screen and (max-width: 1350px) {
-      left: 5.4rem;
-      width: 30rem;
+    @media screen and (max-width: 415px) {
+      width: 10rem;
     }
 
-    @media screen and (max-width: 1150px) {
-      width: 28rem;
+    @media screen and (max-width: 450px) {
+      width: 10rem;
+    }
+
+    @media screen and (max-width: 570px) {
+      width: 24rem;
+      padding: 1rem;
     }
 
     .content {
@@ -67,29 +100,49 @@
       flex-direction: column;
       gap: 20px;
 
+      h1 {
+        overflow: hidden;
+
+        @media screen and (max-width: 800px) {
+          font-size: 1.1rem;
+        }
+      }
+
       p {
         font-size: 14px;
         line-height: 1.5;
+
+        // @media screen and (max-width: 380px) {
+        //   font-size: 12px;
+        // }
+        @media screen and (max-width: 800px) {
+          font-size: 12px;
+        }
       }
     }
   }
 
   .features-img {
-    position: absolute;
-    right: -10px;
-    transform: scale(1.8);
+    // position: absolute;
+    // right: -10px;
+    transform: scale(1.9);
     transition: all 0.5s ease-in-out;
+    // right: -1rem;
 
-    @media screen and (min-width: 1440px) {
-      right: 0;
+    @media screen and (max-width: 950px) {
+      transform: scale(2.2);
     }
 
-    @media screen and (max-width: 1350px) {
+    @media screen and (max-width: 750px) {
       transform: scale(1.4);
     }
 
-    @media screen and (max-width: 1000px) {
-      transform: scale(1.1);
+    @media screen and (max-width: 500px) {
+      transform: scale(1.2);
+    }
+
+    @media screen and (max-width: 500px) {
+      transform: scale(1);
     }
   }
 }
