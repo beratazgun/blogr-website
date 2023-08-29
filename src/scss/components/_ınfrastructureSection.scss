@@ -24,7 +24,6 @@
 
     @media screen and (min-width: 1440px) {
       background-position: left top;
-      background-attachment: fixed;
     }
 
     @media screen and (max-width: 750px) {
@@ -73,7 +72,7 @@
       }
 
       @media screen and (max-width: 750px) {
-        width: 32%;
+        width: 30%;
         transform: translate(-50%, -50%);
         left: 50%;
         top: 30%;
@@ -164,67 +163,3 @@
     }
   }
 }
-
-//   .bg-image {
-// background-color: $very-dark-blackish-blue;
-// width: 100%;
-// border-top-right-radius: 100px;
-// border-bottom-left-radius: 100px;
-// height: 400px;
-// background-image: url("../images/bg-pattern-circles.svg");
-// background-repeat: no-repeat;
-// background-position: 0 -30rem;
-// position: relative;
-// z-index: 1;
-
-// @media screen and (min-width: 1440px) {
-//   background-position: 35rem -30rem;
-// }
-
-//     .container {
-//       display: flex;
-//       flex-direction: row;
-//       justify-content: space-between;
-//       align-items: center;
-//       width: 1440px;
-//       max-width: 1440px;
-//       min-width: 1440px;
-//       margin: 0 auto;
-//       height: 100%;
-//       position: relative;
-
-// .phone-img {
-//   transform: scale(1.4);
-//   position: absolute;
-//   left: 4rem;
-//   top: 0;
-// }
-
-// .content {
-//   color: $white;
-//   width: 36rem;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: flex-start;
-//   gap: 30px;
-//   font-family: $font-ubuntu;
-//   position: absolute;
-//   right: 0;
-//   z-index: 1;
-
-//   h1 {
-//     font-size: 32px;
-//   }
-
-//   p {
-//     font-size: 16px;
-//     line-height: 1.5;
-//     color: $grayish-blue;
-//     letter-spacing: 2px;
-//     line-height: 25px;
-//   }
-// }
-//     }
-//   }
-// }
