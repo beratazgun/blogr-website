@@ -3,15 +3,15 @@ import desktopBgImage from "../images/bg-pattern-intro-desktop.svg";
 import logo from "../images/logo.svg";
 import bottomArrow from "../images/icon-arrow-light.svg";
 
+const { label, subLabel, id } = Astro.props;
 interface Props {
   label: string;
   subLabel: string[];
+  id: string;
 }
-
-const { label, subLabel } = Astro.props;
 ---
 
-<a href="/" class="header-menu--btn">
+<button class="header-menu--btn" id={id}>
   {label}
-  <img src={bottomArrow} alt="" />
-</a>
+  <img src={bottomArrow} alt="" loading="lazy" />
+</button>

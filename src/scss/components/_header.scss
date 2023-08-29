@@ -104,6 +104,8 @@
             color: $white;
             text-decoration: none;
             cursor: pointer;
+            border: none;
+            background-color: transparent;
           }
         }
       }
@@ -136,7 +138,7 @@
           color: $light-red;
           padding: 0.8rem 2rem;
           border-radius: 50px;
-
+          cursor: pointer;
           text-decoration: none;
         }
       }
