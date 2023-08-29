@@ -1,38 +1,152 @@
 .infrastructure-section {
-  height: 560px;
-  position: relative;
-  overflow: hidden;
+  height: 550px;
+  width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: end;
+  overflow: hidden;
+  z-index: 0;
+  position: relative;
 
-  .container {
+  @media screen and (max-width: 750px) {
+    height: 800px;
+  }
+
+  .bg-image {
     background-color: $very-dark-blackish-blue;
     width: 100%;
     border-top-right-radius: 100px;
     border-bottom-left-radius: 100px;
-    height: 400px;
+    height: 420px;
     background-image: url("../images/bg-pattern-circles.svg");
     background-repeat: no-repeat;
-    background-position: 0 -30rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    transition: all 0.3s ease-in-out;
+
+    @media screen and (min-width: 1440px) {
+      background-position: left top;
+      background-attachment: fixed;
+    }
+
+    @media screen and (max-width: 750px) {
+      height: 600px;
+    }
+  }
+
+  .container {
+    width: 1440px;
+    max-width: 1440px;
+    min-width: 1440px;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+
+    .phone-img {
+      transform: scale(1);
+      position: absolute;
+      left: 10%;
+      top: 0;
+      transition: all 0.3s ease-in-out;
+
+      @media screen and (max-width: 1100px) {
+        left: 12%;
+      }
+
+      @media screen and (max-width: 1100px) {
+        left: 14%;
+        transform: scale(0.9);
+      }
+
+      @media screen and (max-width: 920px) {
+        left: 18%;
+        transform: scale(0.87);
+      }
+
+      @media screen and (max-width: 900px) {
+        transform: scale(0.8);
+      }
+
+      @media screen and (max-width: 800px) {
+        transform: scale(0.75);
+      }
+
+      @media screen and (max-width: 750px) {
+        width: 32%;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 30%;
+      }
+    }
 
     .content {
       color: $white;
       width: 36rem;
-      position: absolute;
-      right: 140px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
       gap: 30px;
       font-family: $font-ubuntu;
+      position: absolute;
+      right: 0;
+      z-index: 1;
+      transform: translate(0, -50%);
+      top: 50%;
+      right: 5%;
+      transition: all 0.3s ease-in-out;
+
+      @media screen and (max-width: 1300px) {
+        right: 10%;
+      }
+
+      @media screen and (max-width: 1200px) {
+        width: 30rem;
+        right: 16%;
+      }
+
+      @media screen and (max-width: 1100px) {
+        width: 28rem;
+        right: 18%;
+      }
+
+      @media screen and (max-width: 920px) {
+        width: 22rem;
+        right: 22%;
+      }
+
+      @media screen and (max-width: 800px) {
+        width: 18rem;
+        right: 26%;
+      }
+
+      @media screen and (max-width: 750px) {
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 75%;
+      }
 
       h1 {
         font-size: 32px;
+        transition: all 0.3s ease-in-out;
+
+        @media screen and (max-width: 1100px) {
+          font-size: 28px;
+        }
+
+        @media screen and (max-width: 920px) {
+          font-size: 22px;
+        }
+
+        @media screen and (max-width: 800px) {
+          font-size: 18px;
+        }
+
+        @media screen and (max-width: 750px) {
+          font-size: 36px;
+          text-align: center;
+        }
       }
 
       p {
@@ -41,15 +155,76 @@
         color: $grayish-blue;
         letter-spacing: 2px;
         line-height: 25px;
-      }
-    }
 
-    .phone-img {
-      position: absolute;
-      top: 10px;
-      left: 100px;
-      z-index: 3;
-      transform: scale(1.1);
+        @media screen and (max-width: 800px) {
+          font-size: 14px;
+          text-align: center;
+        }
+      }
     }
   }
 }
+
+//   .bg-image {
+// background-color: $very-dark-blackish-blue;
+// width: 100%;
+// border-top-right-radius: 100px;
+// border-bottom-left-radius: 100px;
+// height: 400px;
+// background-image: url("../images/bg-pattern-circles.svg");
+// background-repeat: no-repeat;
+// background-position: 0 -30rem;
+// position: relative;
+// z-index: 1;
+
+// @media screen and (min-width: 1440px) {
+//   background-position: 35rem -30rem;
+// }
+
+//     .container {
+//       display: flex;
+//       flex-direction: row;
+//       justify-content: space-between;
+//       align-items: center;
+//       width: 1440px;
+//       max-width: 1440px;
+//       min-width: 1440px;
+//       margin: 0 auto;
+//       height: 100%;
+//       position: relative;
+
+// .phone-img {
+//   transform: scale(1.4);
+//   position: absolute;
+//   left: 4rem;
+//   top: 0;
+// }
+
+// .content {
+//   color: $white;
+//   width: 36rem;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: flex-start;
+//   gap: 30px;
+//   font-family: $font-ubuntu;
+//   position: absolute;
+//   right: 0;
+//   z-index: 1;
+
+//   h1 {
+//     font-size: 32px;
+//   }
+
+//   p {
+//     font-size: 16px;
+//     line-height: 1.5;
+//     color: $grayish-blue;
+//     letter-spacing: 2px;
+//     line-height: 25px;
+//   }
+// }
+//     }
+//   }
+// }
