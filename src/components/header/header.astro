@@ -1,0 +1,46 @@
+---
+import desktopBgImage from "../images/bg-pattern-intro-desktop.svg";
+import logo from "../images/logo.svg";
+
+import HeaderNavigationBtn from "./HeaderNavigationBtn.astro";
+---
+
+<header class="header">
+  <div class="navbar-section">
+    <img src={desktopBgImage} alt="bg-image" class="header-bg-image" />
+    <div class="top-of-header">
+      <div class="left-side">
+        <img src={logo} alt="" class="left-side-logo" />
+        <div class="left-side-navigations">
+          <HeaderNavigationBtn
+            label="Features"
+            subLabel={["Contact", "Newsletter", "Linkedin"]}
+          />
+          <HeaderNavigationBtn
+            label="Company"
+            subLabel={["Contact", "Newsletter", "Linkedin"]}
+          />
+          <HeaderNavigationBtn
+            label="Connect"
+            subLabel={["Contact", "Newsletter", "Linkedin"]}
+          />
+        </div>
+      </div>
+      <div class="right-side">
+        <a>Login</a>
+        <a class="sign-up-btn">Sign Up</a>
+      </div>
+      <button class="hamburger-btn">
+        <img src="../images/icon-hamburger.svg" alt="" />
+      </button>
+    </div>
+  </div>
+  <div class="hero-section">
+    <h1>A modern publishing platform</h1>
+    <p>Grow your audience and build your online brand</p>
+    <div class="hero-section-bottom">
+      <button class="start-for-free-btn">Start for Free</button>
+      <button class="learn-more-btn">Learn More</button>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,55 @@
+.infrastructure-section {
+  height: 560px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .container {
+    background-color: $very-dark-blackish-blue;
+    width: 100%;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    height: 400px;
+    background-image: url("../images/bg-pattern-circles.svg");
+    background-repeat: no-repeat;
+    background-position: 0 -30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .content {
+      color: $white;
+      width: 36rem;
+      position: absolute;
+      right: 140px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 30px;
+      font-family: $font-ubuntu;
+
+      h1 {
+        font-size: 32px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 1.5;
+        color: $grayish-blue;
+        letter-spacing: 2px;
+        line-height: 25px;
+      }
+    }
+
+    .phone-img {
+      position: absolute;
+      top: 10px;
+      left: 100px;
+      z-index: 3;
+      transform: scale(1.1);
+    }
+  }
+}

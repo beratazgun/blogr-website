@@ -1,0 +1,17 @@
+---
+import desktopBgImage from "../images/bg-pattern-intro-desktop.svg";
+import logo from "../images/logo.svg";
+import bottomArrow from "../images/icon-arrow-light.svg";
+
+interface Props {
+  label: string;
+  subLabel: string[];
+}
+
+const { label, subLabel } = Astro.props;
+---
+
+<a href="/" class="header-menu--btn">
+  {label}
+  <img src={bottomArrow} alt="" />
+</a>
